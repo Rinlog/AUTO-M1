@@ -1,5 +1,5 @@
-msgbox("k to enable/disable","¯\_(ツ)_/¯")
 Suspend
+msgbox("k to enable/disable","¯\_(ツ)_/¯")
 $LButton::
 {
 	While GetKeyState("LButton", "P")
