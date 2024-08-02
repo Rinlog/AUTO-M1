@@ -5,7 +5,7 @@ $LButton::
 	While GetKeyState("LButton", "P")
 	{
 		Click
-		sleep(30)
+		sleep(30) ;delay between clicks
 	}
 	Return
 }
