@@ -1,6 +1,6 @@
 Suspend
 msgbox("k to enable/disable","¯\_(ツ)_/¯")
-$LButton::
+*$LButton::
 {
 	While GetKeyState("LButton", "P")
 	{
