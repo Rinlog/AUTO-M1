@@ -3,7 +3,7 @@ EnterScript:
 SetMouseDelay, -1
 Suspend
 msgbox,0,AUTO M1,k to enable/disable
-k::
+k:: ;Change this Key to change bind
     Suspend, Permit
     HandlePause()
 *~$LButton::
