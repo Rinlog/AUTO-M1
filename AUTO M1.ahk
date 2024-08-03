@@ -1,32 +1,32 @@
+SetBatchLines, -1
+EnterScript:
+SetMouseDelay, -1
 Suspend
-msgbox("k to enable/disable","¯\_(ツ)_/¯")
-*$LButton::
-{
-	While GetKeyState("LButton", "P")
-	{
-		Click
-		sleep(30) ;delay between clicks
-	}
-	Return
+msgbox,0,AUTO M1,k to enable/disable
+k::
+    Suspend, Permit
+    HandlePause()
+*~$LButton::
+While GetkeyState("LButton", "P"){
+Click
+Sleep 3
 }
-#SuspendExempt
-k::HandlePause ;change the letter before the double colon to change keybind
+Return
 RemoveToolTip(){
 	ToolTip
 	return
 }
-#SuspendExempt False
 HandlePause(){
 	if (A_IsSuspended == 1){ ;if suspended
 		Suspend
-		ToolTip("MACRO ON")
-		sleep(1000)
+		ToolTip,MACRO ON
+		sleep,1000
 		RemoveToolTip()
 	}
 	else{ ;if not suspended
 		Suspend
-		ToolTip("MACRO OFF")
-		sleep(1000)
+		ToolTip,MACRO OFF
+		sleep,1000
 		RemoveToolTip()
 	}
 }
